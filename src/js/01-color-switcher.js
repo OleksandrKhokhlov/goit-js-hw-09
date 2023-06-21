@@ -12,7 +12,6 @@ stopBtn.addEventListener('click', onStopClick);
 
 function onStartClick() {
   startBtn.setAttribute('disabled', 'disabled');
-
   timeIntervalId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
