@@ -16,3 +16,25 @@ img {
   display: block;
   max-width: 100%;
 }
+/* ------------------Timer.css-------------------------- */
+.wrap {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+input#datetime-picker {
+  text-align: center;
+}
+input#datetime-picker:hover {
+  border: 2px solid green;
+  outline: none;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+.value {
+  color: blue;
+}
