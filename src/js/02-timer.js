@@ -40,7 +40,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     startBtn.addEventListener('click', timer.start);
-    currentDate = Date.now();
+    const currentDate = Date.now();
     timer.selectedTime = selectedDates[0].getTime();
     if (currentDate >= timer.selectedTime) {
       startBtn.setAttribute('disabled', 'disabled');
