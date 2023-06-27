@@ -39,6 +39,7 @@ function onFormSubmit(evt) {
 
     delay += step;
   }
+  formRef.reset();
 }
 
 function onFormInput(evt) {
