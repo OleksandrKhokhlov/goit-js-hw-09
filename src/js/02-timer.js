@@ -16,7 +16,9 @@ const timer = {
       return;
     }
     const intervalID = setInterval(() => {
-      tikClockReverse();
+      const currentTime = Date.now();
+      let ms = timer.selectedTime - currentTime;
+      tikClockReverse(ms);
 
       if (Math.trunc(ms / 1000) === 0) {
         clearInterval(intervalID);
@@ -26,9 +28,7 @@ const timer = {
   },
 };
 
-function tikClockReverse() {
-  const currentTime = Date.now();
-  let ms = timer.selectedTime - currentTime;
+function tikClockReverse(ms) {
   if (ms <= 0) {
     return;
   }
@@ -37,6 +37,7 @@ function tikClockReverse() {
   valuesDates[1].textContent = `${hours}`;
   valuesDates[2].textContent = `${minutes}`;
   valuesDates[3].textContent = `${seconds}`;
+  return { days, hours, minutes, seconds };
 }
 
 const options = {
